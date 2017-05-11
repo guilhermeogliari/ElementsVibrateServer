@@ -25,7 +25,7 @@ public class OutputVibrate {
 	private static final Logger log = Logger.getLogger(OutputVibrate.class.getName() );
 	private static List<Device> devices = Collections.synchronizedList(new ArrayList<Device>());
 	
-	protected OutputVibrate() {}
+	public OutputVibrate() {}
 	
 	@OnMessage
 	public void onMessage(Session session, String jsonMessage) {
