@@ -10,7 +10,8 @@ The ElementsVibrateServer is a JEE application running in WebSphere Liberty.
 
 ##### Configuration
 
-- Download the ElementsVibrateServer project
+Download the ElementsVibrateServer project
+
 `git clone https://github.com/guilhermeogliari/ElementsVibrateServer/`
 
 ##### JSON input
