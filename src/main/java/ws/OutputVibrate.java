@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.ejb.Stateless;
+import javax.ejb.Stateful;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -16,7 +16,7 @@ import javax.websocket.server.ServerEndpoint;
 
 import model.Device;
 
-@Stateless
+@Stateful
 @ServerEndpoint("/ws")
 public class OutputVibrate {
 	
@@ -43,6 +43,7 @@ public class OutputVibrate {
 	@OnClose
 	public void onClose(Session session) {
 		log.log(Level.INFO, "onClose");
+		devices.remove(findDevice(session));
 	}
 	
 	public static OutputVibrate getInstance(){
