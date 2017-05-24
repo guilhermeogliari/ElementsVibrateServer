@@ -1,0 +1,7 @@
+---
+applications:
+ - name: ElementsVibrateServer
+   random-route: true
+   path: target/ElementsVibrateServer.war
+   memory: 512M
+   instances: 1
